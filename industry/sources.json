@@ -1,5 +1,5 @@
 {
-  "$comment": "示范信源：首次启动时导入（scripts/seed.ts），已存在的不会被覆盖。之后在后台“信源”里新建、修改和暂停。字段说明见 docs/customize.md。",
+  "$comment": "PulseFin 初始信源（AIHOT 示范源 + 验证可访问的美国官方宏观 RSS）。正式启动后可在后台启停；中国官方源及华尔街见闻接入先按 docs/PULSEFIN_P0_P1.md 验证。新加入信源只展示摘要/原文链接，未经许可不转载全文。",
   "sources": [
     {
       "id": "rss-openai-news",
@@ -362,6 +362,116 @@
       "interval_minutes": 180,
       "tags": [
         "个人"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-fed-monetary",
+      "name": "Federal Reserve — Monetary Policy",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.federalreserve.gov/feeds/press_monetary.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 30,
+      "tags": [
+        "官方",
+        "美国",
+        "宏观"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-bls-cpi",
+      "name": "US BLS — Consumer Price Index",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.bls.gov/feed/cpi.rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 30,
+      "tags": [
+        "官方",
+        "美国",
+        "宏观"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-bls-employment",
+      "name": "US BLS — Employment Situation",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.bls.gov/feed/empsit.rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 30,
+      "tags": [
+        "官方",
+        "美国",
+        "宏观"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-bls-jolts",
+      "name": "US BLS — Job Openings and Labor Turnover",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://www.bls.gov/feed/jolts.rss",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 30,
+      "tags": [
+        "官方",
+        "美国",
+        "宏观"
+      ],
+      "site_fulltext": false,
+      "syndicate_fulltext": false
+    },
+    {
+      "id": "rss-bea-news",
+      "name": "US BEA — News Releases",
+      "kind": "rss",
+      "config": {
+        "feedUrl": "https://apps.bea.gov/rss/rss.xml",
+        "_aihot": {
+          "initialBackfillLimit": 8
+        }
+      },
+      "tier": "T1",
+      "owner_entity_id": null,
+      "participation_mode": "editorial",
+      "interval_minutes": 30,
+      "tags": [
+        "官方",
+        "美国",
+        "宏观"
       ],
       "site_fulltext": false,
       "syndicate_fulltext": false
